@@ -16,7 +16,7 @@ export default function DashBoard(){
 
 useEffect(()=>{ load(); }, [])
 
-const createTasks = async ()=>{
+const createTasks = async (payload)=>{
     const res = await API.post("/tasks", payload);
     setTasks(prev => [res.data, ...prev]);
     toast({title: "Task Created"})

@@ -23,8 +23,6 @@ export default function NavBar(){
                     Dev Task Manager
             </Link>
 
-            </div>
-
             <div className="flex items-center gap-2">
                 <ThemeToggle/>
                 <DropdownMenu>
@@ -41,6 +39,10 @@ export default function NavBar(){
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
+
+            </div>
+
+            
 
         </nav>
     )
