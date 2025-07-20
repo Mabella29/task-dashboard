@@ -18,6 +18,14 @@ const createTasks = async(req,res) =>{
     res.json(task)
 }
 
+const updateTasks = async (req,res)=>{
+    const task = await Tasks.findByIdAndUpdate(req.params.id, req.body, {new:true})
+    res.json(task)
+}
 
+const deleteTasks = async(req,res)=>{
+    const task = await Tasks.findByIdAndDelete(req.params.id)
+    res.json(task)
+}
 
-module.exports = {getMyTasks, getAllTasks, createTasks}
+module.exports = {getMyTasks, getAllTasks, createTasks, updateTasks, deleteTasks}
